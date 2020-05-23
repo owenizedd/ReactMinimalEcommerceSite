@@ -125,7 +125,7 @@ class ProductList extends React.Component{
 */
 
 
-//All of these elements can be made in another file easily but for simplicity, I'm just put it here now.
+//All of these components can be moved into another file easily but for simplicity, I'm just put it here now.
 const Loading = () => {
   return(
     <h1 className="loading">Loading...</h1>
@@ -170,9 +170,10 @@ const AdModal = ({id, onClick}) => {
 
 /*
 
-          UTILITY FUNCTIONS
+          UTILITY FUNCTIONS (Pure JavaScript)
 
 */
+
 //Custom date function without library
 const getDaysPassed = (date) => {
   //logic: it's very simple, just convert resulting difference to second, then minute, then hours, then days, there we have it.
@@ -194,8 +195,8 @@ const comparePrice = (a,b) => {
   else return 0;
 }
 const compareDate = (a,b) => {
-  //for date it's special because in fact the descending, in user point of view is the ascending, because the date from today to
-  //published product date.
+  //for date it's special because in fact the descending, in user point of view is the ascending, 
+  //because the date from today to published product date.
   let dateA = new Date(a.date);
   let dateB = new Date(b.date);
   if (dateA > dateB) return -1;
@@ -208,6 +209,3 @@ ReactDOM.render(
  <ProductList/>,
  document.getElementById('root')
 );
-
-
-//javascript
