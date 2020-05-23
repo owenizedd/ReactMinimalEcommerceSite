@@ -5,6 +5,7 @@ To Run:
 4. No extra node_modules, very straightforward.
 
 Information for reviewer:
+All the core code is at public/ProductList.js
 It's just one simple page, so I just use minimalist react setup.
 It's not for production, only for development especially the babel standalone, please keep in mind.
 However the point is, the code is very easy to move to Create react native or any custom webpack babel setup.
