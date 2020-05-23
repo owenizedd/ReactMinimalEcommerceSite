@@ -1,9 +1,11 @@
 Information for reviewer:
 It's just one simple page, so I just use minimalist react setup, it's not for production, only for development, please keep in mind.
 However the point is, the code is very easy to move to Create react native or any custom webpack babel setup.
+I'm using client side sorting for this, to prevent doing too much fetching from server. This will greatly improve the performance. 
 Also I separate the utility, custom fucntion, stateless component and stateful component by multiline comment, it should be obvious.
 I do this is to make things quick.
 Some logic explanation I put on comment, with //logic:
+
 Note: I use 2 spaces as indentation
 I hope it's easy to read :)
 Thanks!

@@ -83,6 +83,7 @@ class ProductList extends React.Component{
     this.setState({showAd: false});
   }
   filterProduct = (evt) => {
+    //I USE CLIENT SIDE SORTING BECAUSE IT'LL BE FASTER RATHER THAN FETCHING NEW PRODUCT.
     let products = [...this.state.products];
     const {value} = evt.target;
     if (value === 'id'){
