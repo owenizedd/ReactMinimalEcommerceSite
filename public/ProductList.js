@@ -44,7 +44,7 @@ class ProductList extends React.Component{
 
     //logic: use isFetchingUpdate to mark if current state is fetching an update, because if we don't, probably unexpected
     //behavior will happen, just prevent multiple fetch in same time. possible of duplicate items.
-    if (Math.round(document.body.getBoundingClientRect().bottom) <= innerHeight + 20 && !this.state.isFetchingUpdate){
+    if (Math.round(document.body.getBoundingClientRect().bottom) <= innerHeight + 10 && !this.state.isFetchingUpdate){
       this.setState({isFetchingUpdate: true, isLoading: true});
       console.warn('test');
       //do fetch next page
@@ -94,7 +94,6 @@ class ProductList extends React.Component{
     else if (value==='date'){
       products.sort(compareDate);
     }
-
     this.setState({products: products});
   }
   render(){
@@ -108,6 +107,7 @@ class ProductList extends React.Component{
           <option value="price">Price</option>
           <option value="date">Date</option>
         </select>
+        <p  style={{marginLeft: '25px'}}><small> Note: when you scroll down, the new products will not get sorted unless you sort it again</small></p>
         <div className="container">
           {products}
         </div>
