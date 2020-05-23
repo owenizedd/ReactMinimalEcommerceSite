@@ -1,0 +1,24 @@
+/* For quick development, I'll use simple color pallete */
+:root{
+  --darkest: #05396B;
+  --dark: #389583;
+  --light: #5CDB94;
+  --ligher: #8DE4AF;
+  --lightest: #EDF5E0;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: var(--light);
+  color: var(--darkest);
+}
+header{
+  text-align: center;
+  background: var(--dark);
+}
+.ad{
+  height: 150px;
+  width: auto;
+}
