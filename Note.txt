@@ -1,5 +1,6 @@
 Information for reviewer:
-It's just one simple page, so I just use minimalist react setup, it's not for production, only for development, please keep in mind.
+It's just one simple page, so I just use minimalist react setup.
+It's not for production, only for development especially the babel standalone, please keep in mind.
 However the point is, the code is very easy to move to Create react native or any custom webpack babel setup.
 I'm using client side sorting for this, to prevent doing too much fetching from server. This will greatly improve the performance. 
 Also I separate the utility, custom fucntion, stateless component and stateful component by multiline comment, it should be obvious.
