@@ -194,10 +194,12 @@ const comparePrice = (a,b) => {
   else return 0;
 }
 const compareDate = (a,b) => {
+  //for date it's special because in fact the descending, in user point of view is the ascending, because the date from today to
+  //published product date.
   let dateA = new Date(a.date);
   let dateB = new Date(b.date);
-  if (dateA < dateB) return -1;
-  else if (dateA > dateB) return 1;
+  if (dateA > dateB) return -1;
+  else if (dateA < dateB) return 1;
   else return 0;
 }
 
