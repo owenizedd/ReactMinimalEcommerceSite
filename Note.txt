@@ -1,3 +1,9 @@
+To Run:
+1. use: npm start
+2. then open localhost:3000
+3. I use minimal react setup, it's very easy to start, don't have to install anything.
+4. No extra node_modules, very straightforward.
+
 Information for reviewer:
 It's just one simple page, so I just use minimalist react setup.
 It's not for production, only for development especially the babel standalone, please keep in mind.
