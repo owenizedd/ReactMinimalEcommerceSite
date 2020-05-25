@@ -44,7 +44,7 @@ class ProductList extends React.Component{
 
     //logic: use isFetchingUpdate to mark if current state is fetching an update, because if we don't, probably unexpected
     //behavior will happen, just prevent multiple fetch in same time. possible of duplicate items.
-    if (Math.round(document.body.getBoundingClientRect().bottom) <= innerHeight + 10 && !this.state.isFetchingUpdate){
+    if (Math.round(document.body.getBoundingClientRect().bottom) <= innerHeight + 10 && !this.state.isFetchingUpdate && !this.state.endOfProduct){
       this.setState({isFetchingUpdate: true, isLoading: true});
       console.warn('test');
       //do fetch next page
@@ -72,9 +72,7 @@ class ProductList extends React.Component{
         while( nowRandom === this.state.previousAd) {
           nowRandom = Math.floor(Math.random() * 1000 + 1);
         }
-        
         this.setState({showAd: true, previousAd: nowRandom});
-        
       }
     }
   }
@@ -112,6 +110,7 @@ class ProductList extends React.Component{
         <div className="container">
           {products}
         </div>
+        {this.state.endOfProduct && <h2 style={{textAlign: 'center'}}>- End of Product -</h2> } 
         {this.state.isLoading && <Loading/>}
         {this.state.showAd && <AdModal id={this.state.previousAd} onClick={this.hideAd}/>}
       </React.Fragment>
